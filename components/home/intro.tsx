@@ -41,6 +41,14 @@ const Intro = ({ children }: PropsWithChildren) => {
         base: "center",
         lg: "space-between",
       }}
+      gap={{
+        base: "15px",
+        lg: "0px",
+      }}
+      pb={{
+        base: "20px",
+        lg: "0px",
+      }}
     >
       <Box>
         <VStack alignItems="left" gap={4}>
@@ -211,9 +219,14 @@ const Intro = ({ children }: PropsWithChildren) => {
           </VStack>
         </VStack>
       </Box>
-      {/* <Spacer /> */}
       <Box>
-        <HStack gap={8} cursor="pointer">
+        <HStack
+          gap={{
+            base: 6,
+            lg: 8,
+          }}
+          cursor="pointer"
+        >
           <Image
             src="/assets/images/img.jpg"
             alt="img"

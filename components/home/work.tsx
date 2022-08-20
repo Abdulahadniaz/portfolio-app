@@ -1,10 +1,10 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
+import ProjectCard from "./projectCard";
 
 const Work = ({ children }: PropsWithChildren) => {
   return (
     <Box
-      // mt="2300px"
       pos="relative"
       left={{
         base: 0,
@@ -18,7 +18,6 @@ const Work = ({ children }: PropsWithChildren) => {
         base: "100%",
         lg: "50%",
       }}
-      bg="red.700"
       h={{
         base: "auto",
         lg: "1000vh",
@@ -29,8 +28,9 @@ const Work = ({ children }: PropsWithChildren) => {
           base: "relative",
           lg: "absolute",
         }}
-      ></Box>
-      Abdul Ahad Niaz
+      >
+        <ProjectCard />
+      </Box>
     </Box>
   );
 };
