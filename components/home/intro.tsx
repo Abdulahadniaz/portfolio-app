@@ -19,12 +19,17 @@ import { VscGithub } from "react-icons/Vsc";
 const Intro = ({ children }: PropsWithChildren) => {
   return (
     <Box
+      position={{
+        base: "relative",
+        lg: "fixed",
+      }}
+      overflow="hidden"
       w={{
         base: "100%",
         lg: "50%",
       }}
       h={{
-        base: "fit-content",
+        base: "inherit",
         xl: "calc(80vh)",
       }}
       display="flex"
@@ -34,7 +39,7 @@ const Intro = ({ children }: PropsWithChildren) => {
       }}
       justifyContent={{
         base: "center",
-        lg: "space-between ",
+        lg: "space-between",
       }}
     >
       <Box>

@@ -4,7 +4,7 @@ import { PropsWithChildren } from "react";
 const Layout = ({ children }: PropsWithChildren) => {
   return (
     <>
-      <Box as="main" bg="rgb(21, 21, 21)" h="calc(100vh)">
+      <Box as="main" bg="rgb(21, 21, 21)" minHeight="calc(100vh)">
         {children}
       </Box>
     </>
