@@ -9,6 +9,7 @@ import {
   Image,
   Icon,
   Spacer,
+  Container,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { PropsWithChildren } from "react";
@@ -18,7 +19,7 @@ import { VscGithub } from "react-icons/Vsc";
 
 const Intro = ({ children }: PropsWithChildren) => {
   return (
-    <Box
+    <Container
       position={{
         base: "relative",
         lg: "fixed",
@@ -258,7 +259,7 @@ const Intro = ({ children }: PropsWithChildren) => {
           </Link>
         </HStack>
       </Box>
-    </Box>
+    </Container>
   );
 };
 

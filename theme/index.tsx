@@ -60,6 +60,10 @@ const theme = extendTheme({
         xs: {
           fontSize: "10px",
         },
+        base: {
+          fontSize: "14px",
+        },
+
         sm: {
           fontSize: "24px",
         },
