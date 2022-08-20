@@ -1,12 +1,23 @@
 import {
-    extendTheme,
-    StyleFunctionProps,
-    theme as base,
-  } from "@chakra-ui/react";
-  import { mode } from "@chakra-ui/theme-tools";
-  
-  const theme = extendTheme({
-    colors: {
+  extendTheme,
+  StyleFunctionProps,
+  theme as base,
+} from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
+
+const theme = extendTheme({
+  colors: {
+    portwhite: {
+      100: "#fdcedc",
+      200: "#fb9db9",
+      300: "#f96c96",
+      400: "#f73b73",
+      500: "#ffffff",
+      600: "#949495",
+      700: "#930630",
+      800: "#620420",
+      900: "#310210",
+    },
     //   auxpink: {
     //     100: "#fdcedc",
     //     200: "#fb9db9",
@@ -29,29 +40,63 @@ import {
     //     800: "#141630",
     //     900: "#111329",
     //   },
+  },
+  fonts: {
+    body: `Inter, ${base.fonts.body}`,
+    heading: `Inter, ${base.fonts.heading}`,
+  },
+  components: {
+    Link: {
+      baseStyle: (props: StyleFunctionProps) => ({
+        color: mode("portwhite.500", "white")(props),
+      }),
     },
-    fonts: {
-      body: `Inter, ${base.fonts.body}`,
-      heading: `Inter, ${base.fonts.heading}`,
+
+    Heading: {
+      baseStyle: (props: StyleFunctionProps) => ({
+        color: mode("portwhite.500", "white")(props),
+      }),
+      sizes: {
+        xs: {
+          fontSize: "10px",
+        },
+        sm: {
+          fontSize: "24px",
+        },
+        md: {
+          fontSize: "36px",
+        },
+        lg: {
+          fontSize: "48px",
+        },
+        xl: {
+          fontSize: "64px",
+        },
+      },
     },
-    components: {
-    //   Heading: {
-    //     baseStyle: (props: StyleFunctionProps) => ({
-    //       color: mode("auxblue.500", "white")(props),
-    //       fontWeight: "normal",
-    //     }),
-    //     sizes: {
-    //       xs: {
-    //         fontSize: "12px",
-    //       },
-    //     },
-    //   },
-    //   Text: {
-    //     baseStyle: (props: StyleFunctionProps) => ({
-    //       color: mode("auxblue.500", "white")(props),
-    //       fontWeight: "normal",
-    //     }),
-    //   },
+    Text: {
+      baseStyle: (props: StyleFunctionProps) => ({
+        color: mode("portwhite.600", "white")(props),
+        // fontWeight: "normal",
+      }),
+      sizes: {
+        xs: {
+          fontSize: "14px",
+        },
+        sm: {
+          fontSize: "24px",
+        },
+        md: {
+          fontSize: "36px",
+        },
+        lg: {
+          fontSize: "48px",
+        },
+        xl: {
+          fontSize: "64px",
+        },
+      },
+    },
     //   Button: {
     //     variants: {
     //       solid: {
@@ -90,7 +135,7 @@ import {
     //       }),
     //     },
     //   },
-    },
-  });
-  
-  export default theme;
+  },
+});
+
+export default theme;

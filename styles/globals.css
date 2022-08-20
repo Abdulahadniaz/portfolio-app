@@ -24,3 +24,21 @@ a {
     background: black;
   }
 }
+
+.line {
+  margin-top:0;
+  margin-bottom:0;
+  border:0;
+  width: 28px;
+  height:1px;
+  background-color:#949495;
+  }
+
+  .line:hover {
+  margin-top:0;
+  margin-bottom:0;
+  border:0;
+  width: 56px;
+  height:1px;
+  background-color:#ffffff;
+  }
