@@ -119,11 +119,13 @@ const Intro = ({ children }: PropsWithChildren) => {
               lg: "flex",
             }}
           >
-            <Link href="/" passHref>
+            <Link href="#projects" passHref>
               <ChakraLink
                 _hover={{
                   textDecoration: "none",
                   color: "portwhite.500",
+                  transition: "transform 0.4s",
+                  cursor: "pointer",
                 }}
               >
                 <Box display="flex" flexDir="row" alignItems="center" gap={4}>
@@ -147,7 +149,7 @@ const Intro = ({ children }: PropsWithChildren) => {
                 </Box>
               </ChakraLink>
             </Link>
-            <Link href="/" passHref>
+            <Link href="#workExperience" passHref>
               <ChakraLink
                 _hover={{
                   textDecoration: "none",
@@ -183,7 +185,7 @@ const Intro = ({ children }: PropsWithChildren) => {
                 </Box>
               </ChakraLink>
             </Link>
-            <Link href="/" passHref>
+            <Link href="#skills" passHref>
               <ChakraLink
                 _hover={{
                   textDecoration: "none",

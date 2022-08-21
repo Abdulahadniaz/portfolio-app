@@ -34,14 +34,6 @@ a {
   background-color:#949495;
   }
 
-  .line:hover {
-  margin-top:0;
-  margin-bottom:0;
-  border:0;
-  width: 56px;
-  height:1px;
-  background-color:#ffffff;
-  }
 
 .chars_container:hover > div{
        opacity: 0.7; 

@@ -16,7 +16,7 @@ import { VscGithub } from "react-icons/Vsc";
 
 const ProjectCard = () => {
   return (
-    <Box>
+    <Box id="projects">
       <Heading
         my="10px"
         letterSpacing="3px"

@@ -1,6 +1,7 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
 import ProjectCard from "./projectCard";
+import Skills from "./skills";
 import WorkExperience from "./workExperience";
 
 const Work = ({ children }: PropsWithChildren) => {
@@ -32,6 +33,7 @@ const Work = ({ children }: PropsWithChildren) => {
       >
         <ProjectCard />
         <WorkExperience />
+        <Skills />
       </Box>
     </Box>
   );

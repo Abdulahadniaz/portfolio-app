@@ -18,6 +18,7 @@ import { VscGithub } from "react-icons/Vsc";
 const WorkExperience = ({ children }: PropsWithChildren) => {
   return (
     <Box
+      id="workExperience"
       className="chars_container"
       mt="100px"
       display="flex"
