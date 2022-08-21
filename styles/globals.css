@@ -43,8 +43,6 @@ a {
   background-color:#ffffff;
   }
 
-
-
 .chars_container:hover > div{
        opacity: 0.7; 
 }
@@ -52,3 +50,20 @@ a {
        opacity: 1;
 }
    
+.chars_container_2:hover > div{
+  opacity: 0.7; 
+}
+.chars_container_2 div:hover {
+  opacity: 1;
+}
+
+.work-card {
+  width: 48%;
+}
+
+@media (max-width: 768px) {
+  .work-card {
+    width: 98%;
+  }
+}
+

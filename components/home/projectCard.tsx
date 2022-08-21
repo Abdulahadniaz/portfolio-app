@@ -39,7 +39,7 @@ const ProjectCard = () => {
                 className="test"
                 id="a"
                 w={{
-                  base: "95%",
+                  base: "100%",
                   lg: "650px",
                 }}
                 bg="#202022"
