@@ -33,6 +33,19 @@ const WorkExperience = ({ children }: PropsWithChildren) => {
       flexWrap="wrap"
       gap={1}
     >
+      <Heading
+        my="10px"
+        letterSpacing="3px"
+        size="base"
+        display={{
+          base: "block",
+          lg: "none",
+        }}
+        textAlign="center"
+      >
+        Work Experience
+      </Heading>
+
       {[1, 2, 3, 4].map((i, key) => {
         return (
           <div key={key} className="work-card">

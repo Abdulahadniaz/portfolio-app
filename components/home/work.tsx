@@ -22,7 +22,7 @@ const Work = ({ children }: PropsWithChildren) => {
       }}
       h={{
         base: "auto",
-        lg: "1000vh",
+        lg: "250vh",
       }}
     >
       <Box
