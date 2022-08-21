@@ -63,7 +63,6 @@ const theme = extendTheme({
         base: {
           fontSize: "14px",
         },
-
         sm: {
           fontSize: "24px",
         },
