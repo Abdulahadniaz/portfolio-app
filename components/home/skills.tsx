@@ -17,7 +17,7 @@ import { DiJavascript1 } from "react-icons/Di";
 const Skills = ({ children }: PropsWithChildren) => {
   return (
     <Box
-      id="workExperience"
+      id="skills"
       className="chars_container"
       mt="100px"
       display="flex"
