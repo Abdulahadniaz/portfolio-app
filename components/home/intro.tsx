@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { PropsWithChildren } from "react";
-import { FaTwitter } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import { VscGithub } from "react-icons/Vsc";
 
@@ -237,12 +237,15 @@ const Intro = ({ children }: PropsWithChildren) => {
             w="48px"
             h="48px"
           />
-          <Link href="https://twitter.com/abdulahad_says" passHref>
+          <Link
+            href="https://www.linkedin.com/in/abdul-ahad-niaz-27a630177/"
+            passHref
+          >
             <ChakraLink target="_blank" _hover={{ textDecor: "none" }}>
               <HStack gap={2} cursor="pointer">
-                <Icon as={FaTwitter} color="portwhite.500" />
+                <Icon as={FaLinkedinIn} color="portwhite.500" />
                 <Text size="xs" color="portwhite.500">
-                  Twitter
+                  Linkedin
                 </Text>
                 <Icon as={FiExternalLink} color="portwhite.500" />
               </HStack>

@@ -14,6 +14,8 @@ import Link from "next/link";
 import { PropsWithChildren } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import { VscGithub } from "react-icons/Vsc";
+import { RiBaseStationLine } from "react-icons/Ri";
+import { SiUpwork } from "react-icons/Si";
 
 const WorkExperience = ({ children }: PropsWithChildren) => {
   return (
@@ -46,13 +48,18 @@ const WorkExperience = ({ children }: PropsWithChildren) => {
         Work Experience
       </Heading>
 
-      {[1, 2, 3, 4].map((i, key) => {
+      {workExp.map((work, key) => {
         return (
           <div key={key} className="work-card">
             <VStack
               mt={{
                 base: "5px",
-                lg: i === 2 ? "50px" : i === 3 ? "-50px" : "0px",
+                lg:
+                  work.itemNo === 2
+                    ? "50px"
+                    : work.itemNo === 3
+                    ? "-50px"
+                    : "0px",
               }}
               // w={{
               //   base: "100%",
@@ -75,23 +82,22 @@ const WorkExperience = ({ children }: PropsWithChildren) => {
             >
               <VStack alignItems="left">
                 <Heading size="base" letterSpacing="3px">
-                  Software Engineer
+                  {work.role}
                 </Heading>
-                <Text size="xs">Jan 01, 2020 ~ Jan 01, 2021</Text>
+                <Text size="xs">{work.duration}</Text>
               </VStack>
               <VStack alignItems="left" gap={1}>
                 <Heading size="sm" fontWeight="semibold">
-                  Working as the Software Engineer and developing elegant IT
-                  appications
+                  {work.desc}
                 </Heading>
-                <Link href="https://github.com/Abdulahadniaz" passHref>
+                <Link href={work.extLink} passHref>
                   <ChakraLink target="_blank" _hover={{ textDecor: "none" }}>
                     <HStack gap={1} cursor="pointer">
-                      <Icon as={VscGithub} color="portwhite.500" />
+                      <Icon as={work.icon} color="portwhite.500" />
                       <Text size="xs" color="portwhite.500">
-                        Github Link
+                        {work.iconText}
                       </Text>
-                      <Icon as={FiExternalLink} color="portwhite.500" />
+                      <Icon as={work.linkIcon} color="portwhite.500" />
                     </HStack>
                   </ChakraLink>
                 </Link>
@@ -105,3 +111,47 @@ const WorkExperience = ({ children }: PropsWithChildren) => {
 };
 
 export default WorkExperience;
+
+const workExp = [
+  {
+    itemNo: 1,
+    role: "Software Engineer",
+    duration: "Feb 15, 2022 ~ active",
+    desc: "Working as the Software Engineer and developing elegant IT applications",
+    icon: VscGithub,
+    iconText: "Github Link",
+    linkIcon: FiExternalLink,
+    extLink: "https://github.com/Abdulahadniaz",
+  },
+  {
+    itemNo: 2,
+    role: "Wordpress Developer",
+    duration: "Oct 01, 2021 ~ active",
+    desc: "Self-taught and self-employeed WP developer with personal affiliate websites",
+    icon: RiBaseStationLine,
+    iconText: "Live Demo",
+    linkIcon: FiExternalLink,
+    extLink: "https://boardsontop.com/",
+  },
+  {
+    itemNo: 3,
+    role: "Freelancer",
+    duration: "July 01, 2020 ~ active",
+    desc: "Hands-on experience in small to complex projects in Selenium, Python, and web development.",
+    icon: SiUpwork,
+    iconText: "Profile Link",
+    linkIcon: FiExternalLink,
+    extLink:
+      "https://www.upwork.com/freelancers/~0175982e3d6050d16d?viewMode=1",
+  },
+  {
+    itemNo: 4,
+    role: "Databse Devloper",
+    duration: "May 01, 2020 ~ August 02, 2021",
+    desc: "Internee at Muhdin Enterprise Ltd and developed a medium scaled SQL database server in python",
+    icon: RiBaseStationLine,
+    iconText: "Live Demo",
+    linkIcon: FiExternalLink,
+    extLink: "",
+  },
+];
