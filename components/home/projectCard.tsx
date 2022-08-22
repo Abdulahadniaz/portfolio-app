@@ -62,11 +62,15 @@ const ProjectCard = () => {
                   <Link href={project.extLink} passHref>
                     <ChakraLink target="_blank" _hover={{ textDecor: "none" }}>
                       <HStack gap={1} cursor="pointer">
-                        <Icon as={project.icon} color="portwhite.500" />
+                        {project?.icon && (
+                          <Icon as={project.icon} color="portwhite.500" />
+                        )}
                         <Text size="xs" color="portwhite.500">
                           {project.iconText}
                         </Text>
-                        <Icon as={project.linkIcon} color="portwhite.500" />
+                        {project?.linkIcon && (
+                          <Icon as={project.linkIcon} color="portwhite.500" />
+                        )}
                       </HStack>
                     </ChakraLink>
                   </Link>
@@ -102,6 +106,13 @@ const projects = [
     extLink: "",
   },
   {
+    tech: "C++",
+    title: "Distributed File Explorer",
+    desc: "Created a distributed file explorer system in C++, which can simultaneously serve around 5 to 10 clients",
+    iconText: "",
+    extLink: "",
+  },
+  {
     tech: "WORDPRESS, GUTENBERG",
     title: "Boards On Top",
     desc: "Developed a personal amazon affiliate website using Gutenberg, a wordpress extension",
@@ -114,17 +125,8 @@ const projects = [
     tech: "TYPESCIPT, REACTJS, REDUX TOOLKIT, FAKERJS",
     title: "Librarium",
     desc: "A fairly small front-end web-application which serves as book management store",
-    icon: RiBaseStationLine,
-    iconText: "Live Demo",
-    linkIcon: FiExternalLink,
-    extLink: "",
-  },
-  {
-    tech: "",
-    title: "Librarium",
-    desc: "A fairly small front-end web-application which serves as book management store",
-    icon: RiBaseStationLine,
-    iconText: "Live Demo",
+    icon: VscGithub,
+    iconText: "Github Link",
     linkIcon: FiExternalLink,
     extLink: "",
   },
